@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta menu="<%= menu %>">
+    <title>QODR TechTalk</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body class="bg-secondary">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+	  <a class="navbar-brand" href="#">TechTalk</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarColor01">
+	    <ul class="navbar-nav mr-auto">
+	      	<li class="nav-item
+	      		<% if(menu == 'home') { %>
+	      			active
+	      		<% } %>
+	      	">
+	        <a class="nav-link" href="/">Home</a>
+	      </li>
+	      <li class="nav-item
+	      		<% if(menu == 'about') { %>
+	      			active
+	      		<% } %>
+	      ">
+	        <a class="nav-link" href="/about">About</a>
+	      </li>
+	      <li class="nav-item
+	      		<% if(menu == 'contact') { %>
+	      			active
+	      		<% } %>
+	      ">
+	        <a class="nav-link" href="/contact">Contact</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+	<div class="mt-4 container">
+		<%- body -%>
+	</div>
+</body>
+</html>
